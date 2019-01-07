@@ -46,11 +46,11 @@ before_script:
 # Main section. This is where build and test command(s) are specified.
 # If tests pass, publish Docker image (note that we do this here because we want a failed Docker image publish to fail the entire build)
 script:
-- mvn --batch-mode --show-version clean test package
+- mvn --show-version clean test package
 
 deploy:
 provider: script
-script: mvn --batch-mode --show-version deploy
+script: mvn --show-version deploy
 skip_cleanup: true
 on:
 branch: release
