@@ -31,7 +31,7 @@ global:
 # Install any dependencies requires by the project.
 # Note: Travis defaults to `mvn install` if unspecified.
 install:
-echo "Skipping install phase"
+- echo "Skipping install phase"
 
 # Travis CI clones repositories to a depth of 50 commits, which is only really useful if you are performing git operations, so 
 # See https://docs.travis-ci.com/user/customizing-the-build#git-clone-depth
@@ -46,11 +46,11 @@ before_script:
 # Main section. This is where build and test command(s) are specified.
 # If tests pass, publish Docker image (note that we do this here because we want a failed Docker image publish to fail the entire build)
 script:
-- mvn --batch-mode --show-version clean test package
+- mvn --show-version clean test package
 
 deploy:
 provider: script
-script: mvn --batch-mode --show-version deploy
+script: mvn --show-version deploy
 skip_cleanup: true
 on:
 branch: release
