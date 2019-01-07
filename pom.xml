@@ -1,7 +1,45 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
-  <artifactId>HelloWorldExample</artifactId>
-  <version>0.0.1</version>
-  <name>HelloWorldExample</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>HelloWorldExample</artifactId>
+	<version>0.0.1</version>
+	<name>HelloWorldExample</name>
+	<distributionManagement>
+		<repository>
+			<id>nielsen.releases</id>
+			<name>mediaView-releases</name>
+			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/libs-releases-local</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>nielsen.snapshots</id>
+			<name>mediaView-snapshots</name>
+			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/libs-snapshots-local</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+		<repository>
+			<id>cloudera</id>
+			<url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+		</repository>
+		<repository>
+			<id>mediaView-virtual-repo</id>
+			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/repo</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
