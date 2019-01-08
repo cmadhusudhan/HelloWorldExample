@@ -1,2 +1,5 @@
 #!/bin/sh
-java jar target/*.jar
+
+export PATH=$1
+
+java jar ${PATH}/*.jar
