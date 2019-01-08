@@ -5,40 +5,4 @@
 	<artifactId>HelloWorldExample</artifactId>
 	<version>0.0.1</version>
 	<name>HelloWorldExample</name>
-	<distributionManagement>
-		<repository>
-			<id>nielsen.releases</id>
-			<name>mediaView-releases</name>
-			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/libs-releases-local</url>
-			<uniqueVersion>false</uniqueVersion>
-		</repository>
-		<snapshotRepository>
-			<id>nielsen.snapshots</id>
-			<name>mediaView-snapshots</name>
-			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/libs-snapshots-local</url>
-			<uniqueVersion>true</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>https://repo.maven.apache.org/maven2</url>
-		</repository>
-		<repository>
-			<id>cloudera</id>
-			<url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
-		</repository>
-		<repository>
-			<id>mediaView-virtual-repo</id>
-			<url>http://mediaviewscm.enterprisenet.org:8081/artifactory/repo</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>
